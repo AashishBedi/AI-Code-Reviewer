@@ -1,0 +1,6 @@
+{
+  "name": "AI Code Reviewer",
+  "description": "An interactive web application that uses the Gemini API to review and optimize user-provided code. The UI features a resizable split-screen layout for comparing the original and optimized code side-by-side.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

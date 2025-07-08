@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Code Reviewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Enable class-based dark mode for Tailwind CSS
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+      body {
+        overscroll-behavior: none;
+      }
+      /* This sets the dark mode strategy for Tailwind CSS */
+      :root.dark {
+        color-scheme: dark;
+      }
+
+      /* Custom styles for react-simple-code-editor */
+      .code-editor {
+        font-family: 'Fira Code', 'Dank Mono', Inconsolata, Consolas, 'Courier New', Courier, monospace !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        background-color: #f9fafb; /* bg-gray-50 */
+        color: #111827; /* text-gray-900 for light mode fallback */
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      
+      .dark .code-editor {
+        background-color: #111827; /* dark:bg-gray-900 */
+        color: #d1d5db; /* dark:text-gray-300 */
+      }
+
+      /* Remove default PrismJS background to inherit from our editor */
+      .code-editor .prism-editor__textarea:focus,
+      .code-editor .prism-editor__container,
+      pre[class*="language-"] {
+        background: none !important;
+      }
+      
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0",
+    "react-simple-code-editor": "https://esm.sh/react-simple-code-editor@0.13.1",
+    "prismjs/": "https://esm.sh/prismjs@1.29.0/",
+    "prismjs": "https://esm.sh/prismjs@1.29.0",
+    "mermaid": "https://esm.sh/mermaid@10.9.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
